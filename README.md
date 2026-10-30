@@ -24,15 +24,13 @@ A PowerShell wizard for setting up authenticated Windows 11 network sharing betw
 
 ## Getting started
 
-1. Download `Network_Sharing_Wizard.ps1` from this repository.
-2. On the PC that will host the shared folder or drive, open **Windows PowerShell as Administrator**.
-3. Run the script:
-   ```powershell
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-   .\Network_Sharing_Wizard.ps1
-   ```
+1. Download both `Network_Sharing_Wizard.ps1` and `Start_Network_Sharing_Wizard.bat` from this repository. Use **Code → Download ZIP** to get both files together.
+2. Keep the two files in the same folder.
+3. Double-click `Start_Network_Sharing_Wizard.bat`. Approve the Windows User Account Control prompt when asked; the launcher starts the wizard with administrator privileges.
 4. Choose **Set up sharing** and follow the prompts.
-5. On the other PC, run the wizard and choose **Connect** to connect to the share or map it as a network drive.
+5. On the other PC, use the same two files and launcher, then choose **Connect** to connect to the share or map it as a network drive.
+
+You can also run the PowerShell script manually from an Administrator PowerShell window if preferred.
 
 Before starting, check `ipconfig` on both PCs and make sure they are on the same local network. Ignore VPN and virtual-network adapters when comparing addresses.
 
